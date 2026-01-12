@@ -1,30 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse; /* Collapse borders so they are single lines */
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd; /* Light gray border for cells */
+            padding: 8px; /* Spacing inside cells */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Gray background for headers */
+        }
+    </style>
 </head>
 <body>
 
-<h2>Login Form</h2>
+    <h2>Student Information (10 Rows)</h2>
 
-<!-- The 'action' attribute defines where to send the form data when it is submitted -->
-<form action="/submit_login" method="post">
-    <div>
-        <label for="username">Username:</label>
-        <!-- type="text" is the default for input, but it's good practice to specify -->
-        <input type="text" id="username" name="username" required>
-    </div>
-    <br>
-    <div>
-        <label for="password">Password:</label>
-        <!-- type="password" hides the characters as asterisks or bullets -->
-        <input type="password" id="password" name="password" required>
-    </div>
-    <br>
-    <button type="submit">Log In</button>
-</form>
+    <table>
+        <!-- Table Headers -->
+        <thead>
+            <tr>
+                <th>Row No.</th>
+                <th>Name</th>
+                <th>Roll No.</th>
+                <th>Division</th>
+            </tr>
+        </thead>
+        <!-- Table Body (Data) -->
+        <tbody>
+            <!-- Row 1 -->
+            <tr>
+                <td>1</td>
+                <td>A</td>
+                <td>01</td>
+                <td>A</td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td>2</td>
+                <td>B</td>
+                <td>02</td>
+                <td>B</td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+                <td>3</td>
+                <td>C</td>
+                <td>03</td>
+                <td>A</td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+                <td>4</td>
+                <td>D</td>
+                <td>04</td>
+                <td>C</td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+                <td>5</td>
+                <td>E</td>
+                <td>05</td>
+                <td>B</td>
+            </tr>
+            <!-- Row 6 -->
+            <tr>
+                <td>6</td>
+                <td>F</td>
+                <td>06</td>
+                <td>A</td>
+            </tr>
+            <!-- Row 7 -->
+            <tr>
+                <td>7</td>
+                <td>G</td>
+                <td>07</td>
+                <td>C</td>
+            </tr>
+            <!-- Row 8 -->
+            <tr>
+                <td>8</td>
+                <td>H</td>
+                <td>08</td>
+                <td>B</td>
+            </tr>
+            <!-- Row 9 -->
+            <tr>
+                <td>9</td>
+                <td>I</td>
+                <td>09</td>
+                <td>A</td>
+            </tr>
+            <!-- Row 10 -->
+            <tr>
+                <td>10</td>
+                <td>J</td>
+                <td>10</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
+
 
 
