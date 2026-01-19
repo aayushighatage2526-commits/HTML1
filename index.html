@@ -2,109 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Curriculum Vitae</title>
+    <title>Interactive CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #fcefee, #e8f6f3);
+            background: linear-gradient(135deg, #fde2e4, #e2ece9);
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
-            background-color:#005580;
+            background-color: #ffffffcc;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
 
         h1 {
             text-align: center;
-            color: #ffffff;
-        }
-
-        h2 {
-            color: #ffffff;
-            border-bottom: 2px solid #cfe0e8;
-            padding-bottom: 5px;
-        }
-
-        p, li {
-            color:#ffffff;
-            line-height: 1.6;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .section {
-            margin-bottom: 25px;
+            color: #6d597a;
         }
 
         .contact {
             text-align: center;
             font-size: 14px;
-            color:#ffffff;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background-color: #f1dede;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .info-box:hover {
+            background-color: #eac7c7;
+        }
+
+        .info-title {
+            font-weight: bold;
+            color: #355070;
+        }
+
+        .info-content {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Aayushi Ghatage</h1>
-        <p class="contact">
-            Email: XYZ@email.com | Phone: +91 98765 43210 | Location: India
-        </p>
+<div class="container">
+    <h1>John Doe</h1>
+    <div class="contact">
+        📧 johndoe@email.com | 📞 +91 98765 43210 | 📍 India
+    </div>
 
-        <div class="section">
-            <h2>Profile</h2>
-            <p>
-                A motivated and detail-oriented individual with strong communication
-                and problem-solving skills. Passionate about learning new technologies
-                and contributing effectively to a professional environment.
-            </p>
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Profile</div>
+        <div class="info-content">
+            A motivated and detail-oriented individual with a strong interest in
+            technology, creativity, and continuous learning.
         </div>
+    </div>
 
-        <div class="section">
-            <h2>Education</h2>
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Education</div>
+        <div class="info-content">
             <ul>
-                <li>Bachelor of EXTC – XYZ University (2022–2028)</li>
-                <li>Higher Secondary Education – ABC School (2020–2022)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, Basic JavaScript</li>
-                <li>Python & C Programming</li>
-                <li>Teamwork and Communication</li>
-                <li>Problem Solving</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Experience</h2>
-            <p>
-                Interned as a Web Development Intern where I worked on creating
-                responsive web pages and improving UI design.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Designing</li>
-                <li>Learning new technologies</li>
+                <li>B.Sc Computer Science – XYZ University (2022–2025)</li>
+                <li>Higher Secondary – ABC School (2020–2022)</li>
             </ul>
         </div>
     </div>
+
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Skills</div>
+        <div class="info-content">
+            HTML & CSS, JavaScript, Python, Problem Solving, Communication
+        </div>
+    </div>
+
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Experience</div>
+        <div class="info-content">
+            Web Development Intern – Worked on responsive websites,
+            improved UI design, and collaborated with a team.
+        </div>
+    </div>
+
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Projects</div>
+        <div class="info-content">
+            Portfolio Website, Student Management System,
+            Interactive Resume Website
+        </div>
+    </div>
+
+    <div class="info-box" onclick="toggleInfo(this)">
+        <div class="info-title">Hobbies & Interests</div>
+        <div class="info-content">
+            Reading, Designing, Learning new technologies
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(box) {
+        const content = box.querySelector(".info-content");
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
 
 </body>
 </html>
