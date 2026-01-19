@@ -2,115 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Curriculum Vitae</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Data Table</title>
+
     <style>
-        table {
-            border-collapse: collapse; /* Collapse borders so they are single lines */
-            width: 100%;
-            margin-top: 20px;
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #fcefee, #e8f6f3);
+            margin: 0;
+            padding: 0;
         }
-        th, td {
-            border: 1px solid #ddd; /* Light gray border for cells */
-            padding: 8px; /* Spacing inside cells */
-            text-align: left; /* Align text to the left */
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color:#005580;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        th {
-            background-color: #f2f2f2; /* Gray background for headers */
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #cfe0e8;
+            padding-bottom: 5px;
+        }
+
+        p, li {
+            color:#ffffff;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 14px;
+            color:#ffffff;
         }
     </style>
 </head>
 <body>
 
-    <h2>Student Information (10 Rows)</h2>
+    <div class="container">
+        <h1>Aayushi Ghatage</h1>
+        <p class="contact">
+            Email: XYZ@email.com | Phone: +91 98765 43210 | Location: India
+        </p>
 
-    <table>
-        <!-- Table Headers -->
-        <thead>
-            <tr>
-                <th>Row No.</th>
-                <th>Name</th>
-                <th>Roll No.</th>
-                <th>Division</th>
-            </tr>
-        </thead>
-        <!-- Table Body (Data) -->
-        <tbody>
-            <!-- Row 1 -->
-            <tr>
-                <td>1</td>
-                <td>A</td>
-                <td>01</td>
-                <td>A</td>
-            </tr>
-            <!-- Row 2 -->
-            <tr>
-                <td>2</td>
-                <td>B</td>
-                <td>02</td>
-                <td>B</td>
-            </tr>
-            <!-- Row 3 -->
-            <tr>
-                <td>3</td>
-                <td>C</td>
-                <td>03</td>
-                <td>A</td>
-            </tr>
-            <!-- Row 4 -->
-            <tr>
-                <td>4</td>
-                <td>D</td>
-                <td>04</td>
-                <td>C</td>
-            </tr>
-            <!-- Row 5 -->
-            <tr>
-                <td>5</td>
-                <td>E</td>
-                <td>05</td>
-                <td>B</td>
-            </tr>
-            <!-- Row 6 -->
-            <tr>
-                <td>6</td>
-                <td>F</td>
-                <td>06</td>
-                <td>A</td>
-            </tr>
-            <!-- Row 7 -->
-            <tr>
-                <td>7</td>
-                <td>G</td>
-                <td>07</td>
-                <td>C</td>
-            </tr>
-            <!-- Row 8 -->
-            <tr>
-                <td>8</td>
-                <td>H</td>
-                <td>08</td>
-                <td>B</td>
-            </tr>
-            <!-- Row 9 -->
-            <tr>
-                <td>9</td>
-                <td>I</td>
-                <td>09</td>
-                <td>A</td>
-            </tr>
-            <!-- Row 10 -->
-            <tr>
-                <td>10</td>
-                <td>J</td>
-                <td>10</td>
-                <td>C</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="section">
+            <h2>Profile</h2>
+            <p>
+                A motivated and detail-oriented individual with strong communication
+                and problem-solving skills. Passionate about learning new technologies
+                and contributing effectively to a professional environment.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of EXTC – XYZ University (2022–2028)</li>
+                <li>Higher Secondary Education – ABC School (2020–2022)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, Basic JavaScript</li>
+                <li>Python & C Programming</li>
+                <li>Teamwork and Communication</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <p>
+                Interned as a Web Development Intern where I worked on creating
+                responsive web pages and improving UI design.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Reading</li>
+                <li>Designing</li>
+                <li>Learning new technologies</li>
+            </ul>
+        </div>
+    </div>
 
 </body>
 </html>
-
-
-
