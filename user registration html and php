@@ -1,0 +1,78 @@
+html code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="process.php" method="POST">
+    
+    Name: <br>
+    <input type="text" name="name" required><br><br>
+
+    Email: <br>
+    <input type="email" name="email" required><br><br>
+
+    Password: <br>
+    <input type="password" name="password" required><br><br>
+
+    Gender: <br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female<br><br>
+
+    Hobbies: <br>
+    <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+    <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+    <input type="checkbox" name="hobbies[]" value="Music"> Music<br><br>
+
+    Country: <br>
+    <select name="country">
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+    </select><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+phpcode:-
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $gender = $_POST['gender'];
+    $country = $_POST['country'];
+
+    // Handle hobbies (array)
+    if (!empty($_POST['hobbies'])) {
+        $hobbies = implode(", ", $_POST['hobbies']);
+    } else {
+        $hobbies = "None";
+    }
+
+    echo "<h2>Registration Details</h2>";
+    echo "Name: " . $name . "<br>";
+    echo "Email: " . $email . "<br>";
+    echo "Password: " . $password . "<br>";
+    echo "Gender: " . $gender . "<br>";
+    echo "Hobbies: " . $hobbies . "<br>";
+    echo "Country: " . $country . "<br>";
+}
+
+?>
+
+save in ht docs xampp as register.html Nd process.php
